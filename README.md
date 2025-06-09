@@ -1,1 +1,4 @@
-# turbo-esbuilder
+# setting's
+## @alias
+### apps - webpack
+### packages - esbuild
