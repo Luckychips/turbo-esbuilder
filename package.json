@@ -4,19 +4,22 @@
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
-    "lint": "turbo run lint"
+    "lint": "turbo run lint",
+    "clear-1": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' \\;\n",
+    "clear-2": "rm -rf pnpm-lock.yaml .turbo .next/cache\n",
+    "clear-all": "pnpm clear-1 && pnpm clear-2"
   },
   "packageManager": "pnpm@10.12.1",
   "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@types/node": "^20.19.0",
-    "@types/react": "^19.1.0",
-    "@types/react-dom": "^19.1.0",
-    "esbuild": "^0.25.5",
-    "turbo": "^2.5.4",
-    "typescript": "^5.8.3"
+    "@types/node": "20.19.0",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.0",
+    "esbuild": "0.25.5",
+    "turbo": "2.5.4",
+    "typescript": "5.8.3"
   }
 }
