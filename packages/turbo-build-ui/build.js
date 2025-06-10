@@ -1,7 +1,7 @@
 import esbuild from 'esbuild';
 import path from 'path';
 
-const entryFile = 'src/core.ts';
+const entryFile = 'src/system.ts';
 const distDir = 'dist';
 
 const commonOptions = {

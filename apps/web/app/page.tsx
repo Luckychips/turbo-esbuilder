@@ -1,11 +1,9 @@
 import Image from 'next/image';
-import { Button } from 'turbo-build-ui/core';
 import styles from './page.module.css';
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <Button />
       <main className={styles.main}>
         <Image
           className={styles.logo}
