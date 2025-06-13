@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import { WrappedButton } from 'turbo-build-ui/system';
+import { WrappedButton } from 'turbo-build-ui';
 
 const BoardTemplate = () => {
     return (

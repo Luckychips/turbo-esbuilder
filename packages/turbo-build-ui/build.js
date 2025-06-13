@@ -1,7 +1,7 @@
 import esbuild from 'esbuild';
 import path from 'path';
 
-const entryFile = 'src/system.ts';
+const entryFile = 'src/index.ts';
 const distDir = 'dist';
 
 const commonOptions = {
@@ -9,8 +9,7 @@ const commonOptions = {
   bundle: true,
   sourcemap: true,
   minify: false,
-  platform: 'node',
-  external: [],
+  external: ['react', 'react-dom', '@emotion/react', '@emotion/styled'],
   tsconfig: 'tsconfig.json',
 };
 
@@ -19,6 +18,7 @@ async function buildCJS() {
     ...commonOptions,
     outfile: path.join(distDir, 'index.cjs.js'),
     format: 'cjs',
+    platform: 'node',
     target: ['node14'],
   });
 }
@@ -28,6 +28,7 @@ async function buildESM() {
     ...commonOptions,
     outfile: path.join(distDir, 'index.esm.js'),
     format: 'esm',
+    platform: 'browser',
     target: ['es2020'],
   });
 }

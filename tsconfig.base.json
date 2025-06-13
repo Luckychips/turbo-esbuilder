@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "turbo-build-ui/*": ["packages/turbo-build-ui/src/*"]
+      "turbo-build-ui/*": ["packages/turbo-build-ui/dist/*"]
     }
   }
 }
